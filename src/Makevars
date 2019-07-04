@@ -1,0 +1,2 @@
+PKG_CFLAGS+=-D_MONGO_USE_GETADDRINFO -DR_SAFETY_NET
+PKG_LIBS+=-lcurl -lgsl -lgslcblas
