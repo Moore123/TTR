@@ -1,0 +1,51 @@
+## under R console, load TTR library first
+
+> library(TTR)
+Loading required package: xts
+Loading required package: zoo
+
+#  get sh600000 from tongdaxin file.
+> xone<-get_ttrc(c("/home/stock/rawdata/sh600000.day","/home/stock/finance"),10,1)
+c( "[parameter1]","[parameter2]")
+  parameter1 == tong da xin stock file, which with .day extension;
+  parameter2 == stock bonus and deliver, format as end  notes section [bp] ;
+
+  10, this parameter is how many days to get
+   1, this should be 1 now;
+
+# then got it
+> xone
+Date Open High  Low Close    Volume   Amount
+ [1,] 20190624 1209 1213 1196  1203 411172384 34195300
+ [2,] 20190625 1198 1198 1151  1166 940465152 80359309
+ [3,] 20190626 1156 1173 1155  1166 431115040 36973120
+ [4,] 20190627 1168 1184 1155  1164 561472064 47997739
+ [5,] 20190628 1167 1168 1154  1168 343056320 29545145
+ [6,] 20190701 1186 1192 1169  1171 646405184 54887830
+ [7,] 20190702 1172 1174 1157  1161 595072192 51165781
+ [8,] 20190703 1162 1163 1151  1156 422580480 36567000
+ [9,] 20190704 1161 1167 1157  1162 352968320 30369200
+[10,] 20190705 1163 1164 1153  1157 298158880 25753211
+
+
+## notes [bp], file contents of bonus and deliver, first line is date, next line is bonus and deliver
+2018-07-13
+                ÿ10Ϣ1.0Ԫ 
+2017-05-25
+                תɣ0Ϣ2.0Ԫ
+2016-06-23
+                תɣ0Ϣ5.15Ԫ
+2015-06-23
+                ÿ10Ϣ7.57Ԫ 
+2014-06-24
+                ÿ10Ϣ6.6Ԫ 
+2013-06-03
+                ÿ10Ϣ5.5Ԫ
+2012-06-26
+                ÿ10Ϣ3.0Ԫ
+2011-06-03
+                ÿ103ÿ10Ϣ1.6Ԫ 
+2010-06-10
+                ÿ103ÿ10Ϣ1.5Ԫ
+2009-06-09
+                ÿ104ÿ10Ϣ2.3Ԫ
